@@ -1,0 +1,15 @@
+[core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/atomxkc-drold/IPAFetch.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	tagopt = --no-tags
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = atomxkc-droid
+	email = Hh@FTVMCJaiYU6i
