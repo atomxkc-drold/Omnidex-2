@@ -175,7 +175,7 @@ fun VaultScreen(
                     SearchPill(value = query, onValueChange = { query = it })
                     Spacer(Modifier.height(12.dp))
                     ChipRow(
-                        options = listOf(FILTER_ALL, FILTER_CONTEXT, FILTER_SESSION) + EntryType.editorOrder.filterNot { it.isContext }.map { it.label },
+                        options = listOf(FILTER_ALL, FILTER_CONTEXT, FILTER_SESSION) + EntryType.editorOrder.filterNot { it.isSecret }.map { it.label },
                         selected = filter,
                         label = { it },
                         onSelect = { filter = it }
