@@ -196,7 +196,7 @@ fun AddEditScreen(
                         supporting = selectedTemplate,
                         leading = {
                             Icon(
-                                Icons.Rounded.AutoAwesome,
+                                Icons.Rounded.Star,
                                 contentDescription = null,
                                 tint = colors.accent,
                                 modifier = Modifier.size(20.dp)
