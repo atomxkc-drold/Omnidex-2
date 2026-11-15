@@ -88,8 +88,9 @@ object EntryCategories {
     const val PAYMENTS = "Payments"
     const val COMMS = "Communication"
     const val DATA = "Data"
-    const val DESIGN = "Design"
+    const val SECURITY = "Security"
     const val OTHER = "Other"
+    const val DESIGN = "Design"
 
     val ALL = listOf(AI, MUSIC, CLOUD, DEV, PAYMENTS, COMMS, DATA, DESIGN, OTHER)
 }

@@ -89,8 +89,8 @@ fun SessionSheet(
                 listOf("ci", "review", "debug", "deploy").forEach { scope ->
                     TagPill(
                         text = scope,
-                        selected = scopeLabel == scope,
-                        onClick = { scopeLabel = scope }
+                        modifier = Modifier.clickable { scopeLabel = scope },
+                        color = if (scopeLabel == scope) colors.accent else colors.accentSoft
                     )
                 }
             }
@@ -103,8 +103,8 @@ fun SessionSheet(
                 listOf(5, 15, 30, 60, 120, 1440).forEach { ttl ->
                     TagPill(
                         text = if (ttl >= 60) "${ttl/60}h" else "${ttl}m",
-                        selected = ttlMinutes == ttl,
-                        onClick = { ttlMinutes = ttl }
+                        modifier = Modifier.clickable { ttlMinutes = ttl },
+                        color = if (ttlMinutes == ttl) colors.accent else colors.accentSoft
                     )
                 }
             }
