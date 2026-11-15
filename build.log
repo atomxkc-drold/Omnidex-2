@@ -1,0 +1,317 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :omnidex
+WARNING: The option setting 'android.aapt2FromMavenOverride=aapt2' is experimental.
+Checking the license for package Android SDK Build-Tools 33.0.1 in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/licenses
+License for package Android SDK Build-Tools 33.0.1 accepted.
+Preparing "Install Android SDK Build-Tools 33.0.1 v.33.0.1".
+"Install Android SDK Build-Tools 33.0.1 v.33.0.1" ready.
+Installing Android SDK Build-Tools 33.0.1 in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/build-tools/33.0.1
+"Install Android SDK Build-Tools 33.0.1 v.33.0.1" complete.
+"Install Android SDK Build-Tools 33.0.1 v.33.0.1" finished.
+Checking the license for package Android SDK Platform 34 in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/licenses
+License for package Android SDK Platform 34 accepted.
+Preparing "Install Android SDK Platform 34 (revision 3)".
+Warning: Package "Android SDK Platform 34" (platforms;android-34) should be installed in 
+"/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34" but 
+it already exists.
+Installing in "/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34-2" instead.
+"Install Android SDK Platform 34 (revision 3)" ready.
+Installing Android SDK Platform 34 in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34-2
+"Install Android SDK Platform 34 (revision 3)" complete.
+"Install Android SDK Platform 34 (revision 3)" finished.
+Observed package id 'platforms;android-34' in inconsistent location '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34-2' (Expected '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34')
+Warning: Observed package id 'platforms;android-34' in inconsistent location '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34-2' (Expected '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34')
+Checking the license for package Android SDK Platform-Tools in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/licenses
+License for package Android SDK Platform-Tools accepted.
+Preparing "Install Android SDK Platform-Tools v.37.0.1".
+"Install Android SDK Platform-Tools v.37.0.1" ready.
+Installing Android SDK Platform-Tools in /data/user/0/com.androidharness.app/files/linux/home/android-sdk/platform-tools
+"Install Android SDK Platform-Tools v.37.0.1" complete.
+"Install Android SDK Platform-Tools v.37.0.1" finished.
+Warning: Observed package id 'platforms;android-34' in inconsistent location '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34-2' (Expected '/data/user/0/com.androidharness.app/files/linux/home/android-sdk/platforms/android-34')
+
+> Task :omnidex:preBuild UP-TO-DATE
+> Task :omnidex:preDebugBuild UP-TO-DATE
+> Task :omnidex:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :omnidex:checkKotlinGradlePluginConfigurationErrors
+> Task :omnidex:generateDebugBuildConfig
+> Task :omnidex:checkDebugAarMetadata
+> Task :omnidex:generateDebugResValues
+> Task :omnidex:mapDebugSourceSetPaths
+> Task :omnidex:generateDebugResources
+> Task :omnidex:packageDebugResources
+> Task :omnidex:mergeDebugResources
+> Task :omnidex:createDebugCompatibleScreenManifests
+> Task :omnidex:extractDeepLinksDebug
+> Task :omnidex:parseDebugLocalResources
+
+> Task :omnidex:processDebugMainManifest
+/data/data/com.androidharness.app/files/github-projects/Omnidex-2-2ae0c0f3/omnidex/src/main/AndroidManifest.xml:12:5-35:19 Warning:
+	application@android:allowBackup was tagged at AndroidManifest.xml:12 to replace other declarations but no other declaration present
+
+> Task :omnidex:processDebugManifest
+> Task :omnidex:processDebugManifestForPackage
+> Task :omnidex:javaPreCompileDebug
+> Task :omnidex:processDebugResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':omnidex:processDebugResources'.
+> Could not resolve all files for configuration ':omnidex:debugRuntimeClasspath'.
+   > Failed to transform material-1.11.0.aar (com.google.android.material:material:1.11.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ed448060ba894935cddba14187328625/transformed/material-1.11.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform biometric-1.2.0-alpha05.aar (androidx.biometric:biometric:1.2.0-alpha05) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/42d62b8d02f49880688c87972590c9af/transformed/biometric-1.2.0-alpha05.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform constraintlayout-2.0.1.aar (androidx.constraintlayout:constraintlayout:2.0.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/85beb24d6ca189c2b01937d4072d4912/transformed/constraintlayout-2.0.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform coil-compose-2.6.0.aar (io.coil-kt:coil-compose:2.6.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ba0b27b804d0142ec836f70205fbd812/transformed/jetified-coil-compose-2.6.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform coil-compose-base-2.6.0.aar (io.coil-kt:coil-compose-base:2.6.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4f24fc73ffb48b48eba1df7647c8939b/transformed/jetified-coil-compose-base-2.6.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform coil-2.6.0.aar (io.coil-kt:coil:2.6.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/017c7b3bd4b0c7892987cd38ccd02fe6/transformed/jetified-coil-2.6.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform coil-base-2.6.0.aar (io.coil-kt:coil-base:2.6.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/748ec57879325e7b011600177632725e/transformed/jetified-coil-base-2.6.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform appcompat-resources-1.6.1.aar (androidx.appcompat:appcompat-resources:1.6.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/71c8a147f808b6e4ccfd3a4f03d06bb4/transformed/jetified-appcompat-resources-1.6.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform appcompat-1.6.1.aar (androidx.appcompat:appcompat:1.6.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/bf4837ef3970de2c85a8f4102b779320/transformed/appcompat-1.6.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform viewpager2-1.0.0.aar (androidx.viewpager2:viewpager2:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/d69307e049d3cb1e599fa14e91fb5304/transformed/jetified-viewpager2-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform fragment-1.6.2.aar (androidx.fragment:fragment:1.6.2) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/d3954a5af9b288b582f9973da97bf988/transformed/fragment-1.6.2.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform fragment-ktx-1.6.2.aar (androidx.fragment:fragment-ktx:1.6.2) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/fce9ab07c2422afdd211e5e01e3e1ebc/transformed/jetified-fragment-ktx-1.6.2.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform coordinatorlayout-1.1.0.aar (androidx.coordinatorlayout:coordinatorlayout:1.1.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ca78738f821cc8cb6ecf9c880ffda1f7/transformed/coordinatorlayout-1.1.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform drawerlayout-1.1.1.aar (androidx.drawerlayout:drawerlayout:1.1.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/324f39ff2e3fa1369d4517924a13ddce/transformed/drawerlayout-1.1.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform dynamicanimation-1.0.0.aar (androidx.dynamicanimation:dynamicanimation:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/725ff68da5f839f73e33eb5a3e7f06db/transformed/dynamicanimation-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform transition-1.2.0.aar (androidx.transition:transition:1.2.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/188dba72617495ebe771afc7ebfc1ea2/transformed/transition-1.2.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/633302545f26ae82dbe4aee932a2ccc9/transformed/vectordrawable-animated-1.1.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4ed624c80f26f8698bff6ad7da2e0588/transformed/vectordrawable-1.1.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform navigation-common-2.7.7.aar (androidx.navigation:navigation-common:2.7.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/0f7338a23a5e29ba98c6213b45cb3095/transformed/navigation-common-2.7.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform navigation-runtime-2.7.7.aar (androidx.navigation:navigation-runtime:2.7.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/75ec63f97f2f95f30e535ae5e2c9a011/transformed/navigation-runtime-2.7.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform navigation-common-ktx-2.7.7.aar (androidx.navigation:navigation-common-ktx:2.7.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a91c8e5724a075f566ecb58e0017c0fa/transformed/navigation-common-ktx-2.7.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform navigation-runtime-ktx-2.7.7.aar (androidx.navigation:navigation-runtime-ktx:2.7.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/aac24d6b6e7f67308224bfad4822982c/transformed/navigation-runtime-ktx-2.7.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform navigation-compose-2.7.7.aar (androidx.navigation:navigation-compose:2.7.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/22f633bc27912c0a166fc4290a628dd3/transformed/jetified-navigation-compose-2.7.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform material3-release.aar (androidx.compose.material3:material3-android:1.2.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/9ed2f9853b903cf8b2f38fdfe624dce0/transformed/jetified-material3-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/adeb5ef820982d9cbace043ed1f1c2c1/transformed/jetified-savedstate-ktx-1.2.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4fd1f206d50e76f16058b105521810e6/transformed/jetified-savedstate-1.2.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform legacy-support-core-utils-1.0.0.aar (androidx.legacy:legacy-support-core-utils:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/1a6a64a5c921809af7a825a6f365d674/transformed/legacy-support-core-utils-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform loader-1.0.0.aar (androidx.loader:loader:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/96ff6b922c1f276bb1378846f38d4ad5/transformed/loader-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform material-icons-core-release.aar (androidx.compose.material:material-icons-core-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/0b4be67e8addd3fbc6ef3109d280b323/transformed/jetified-material-icons-core-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform material-icons-extended-release.aar (androidx.compose.material:material-icons-extended-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a701d324a8cfd03926c0fc9ba4615696/transformed/jetified-material-icons-extended-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform material-ripple-release.aar (androidx.compose.material:material-ripple-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a936768ba36f61eba06816d7aa5cb328/transformed/jetified-material-ripple-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform animation-core-release.aar (androidx.compose.animation:animation-core-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/e87566fbbe27fa3a662f5822cba06343/transformed/jetified-animation-core-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform animation-release.aar (androidx.compose.animation:animation-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/706b7dce247e39563039b95890466a74/transformed/jetified-animation-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform foundation-layout-release.aar (androidx.compose.foundation:foundation-layout-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/7d61278f636a94af3d5ca5b931dde129/transformed/jetified-foundation-layout-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform foundation-release.aar (androidx.compose.foundation:foundation-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/d385e435a80f40718cb79f3eafc15091/transformed/jetified-foundation-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-unit-release.aar (androidx.compose.ui:ui-unit-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ec3afff6ca5a53ccff5fce8a9431dd61/transformed/jetified-ui-unit-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-geometry-release.aar (androidx.compose.ui:ui-geometry-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/71df14252b4f1910aa20b93f97c70a03/transformed/jetified-ui-geometry-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-util-release.aar (androidx.compose.ui:ui-util-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/45c44566371a059b8cf4b41688ef00e3/transformed/jetified-ui-util-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-graphics-release.aar (androidx.compose.ui:ui-graphics-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/2132f3e1c18ac5d785a56ae73f44236e/transformed/jetified-ui-graphics-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-text-release.aar (androidx.compose.ui:ui-text-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4bbd2eb506e48c09d3f2668a33ca8357/transformed/jetified-ui-text-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/5d961de4e1b7d8df599d201eef6ecf83/transformed/jetified-emoji2-views-helper-1.3.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/94109a10d56cf67891bfcf8a010263b6/transformed/jetified-emoji2-1.3.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-process-2.7.0.aar (androidx.lifecycle:lifecycle-process:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/608a5ed1c37dd94ce171eda022e1fac6/transformed/jetified-lifecycle-process-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-livedata-2.7.0.aar (androidx.lifecycle:lifecycle-livedata:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/2eca0770ff177dae3584fb210f0f4910/transformed/lifecycle-livedata-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-livedata-core-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/67901e954608b4af0970a73fe72606df/transformed/lifecycle-livedata-core-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-viewmodel-savedstate-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/300eac02110336065d6cb8215b5a638c/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-viewmodel-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/9b682fd62c1e26db9b53b1a6d418540f/transformed/lifecycle-viewmodel-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-runtime-2.7.0.aar (androidx.lifecycle:lifecycle-runtime:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/784ef4ad9614b8accbe1f3fdb83ef459/transformed/lifecycle-runtime-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-livedata-core-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/abebce4d0c4f727bfa6720c4852a64a1/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-viewmodel-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a9e7763f6872ca046e7d2fd8f596da40/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-runtime-ktx-2.7.0.aar (androidx.lifecycle:lifecycle-runtime-ktx:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/6d624699d63705827505864474e016e0/transformed/jetified-lifecycle-runtime-ktx-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-viewmodel-compose-2.7.0.aar (androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/23c1a8d2c22bfa1b67b34ea7bd7c2779/transformed/jetified-lifecycle-viewmodel-compose-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform lifecycle-runtime-compose-2.7.0.aar (androidx.lifecycle:lifecycle-runtime-compose:2.7.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/af60fe0d79aa18b52223499e1d3229fb/transformed/jetified-lifecycle-runtime-compose-2.7.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/23e539d2df44bebe64ca094a70402b9f/transformed/jetified-accompanist-drawablepainter-0.32.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform ui-release.aar (androidx.compose.ui:ui-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/20166808479786fb69c5f7b1911aa671/transformed/jetified-ui-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a31c8afe99a2dcb3db10d1cf036f2442/transformed/jetified-activity-ktx-1.9.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/17a19f51f2a88cd19adc22b893663455/transformed/jetified-activity-compose-1.9.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform activity-1.9.0.aar (androidx.activity:activity:1.9.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4845a4c740ec3c247fe9d08372cc6abe/transformed/jetified-activity-1.9.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/781620bf31e3cebda5ff694e26ff88cf/transformed/recyclerview-1.1.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/741957b25fafd5a960454acf40a465cc/transformed/viewpager-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform customview-1.1.0.aar (androidx.customview:customview:1.1.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/3dbb778153049e1cad89327ab9854668/transformed/customview-1.1.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/f804548a3a8171c30d2f169161978618/transformed/jetified-autofill-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform core-1.13.1.aar (androidx.core:core:1.13.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ee8436d023c2355255862694f0e2eee3/transformed/core-1.13.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/34401561c3f42b9787f87c88f653a57a/transformed/jetified-customview-poolingcontainer-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/cee74763e66ae61c1e27f817d691d645/transformed/jetified-core-ktx-1.13.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/6feae6dd50b6fe7dc112132253fc2092/transformed/jetified-annotation-experimental-1.4.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/6300d4251b7745275971744d46e8e476/transformed/jetified-runtime-saveable-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.status=release, org.gradle.usage=java-runtime, org.jetbrains.kotlin.platform.type=androidJvm}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/eb0d5f651f56e55d60961c86294ba770/transformed/jetified-runtime-release.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/5165e836d64a4143e1e807cda2384eb9/transformed/jetified-security-crypto-1.1.0-alpha06.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/0c44d548b971f2aae3df675b2e818fe1/transformed/versionedparcelable-1.1.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform cardview-1.0.0.aar (androidx.cardview:cardview:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/f9aa35ecd01b0e183cace54a6b4c25a8/transformed/cardview-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/f0ebb5374b029f903060d9c0554b1918/transformed/interpolator-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/5f7057de95443368d6c49ae7c03956db/transformed/cursoradapter-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/1ad69ce4bdb6913379fa51aff0edb6cb/transformed/jetified-profileinstaller-1.3.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ed098711184c3e4ab77afefa5b9829c6/transformed/jetified-startup-runtime-1.1.1.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/bf82a34db32411e59d3c48e134fb3bb1/transformed/jetified-tracing-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/b476dc79e64a97f9119789bf524f648c/transformed/core-runtime-2.2.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/a5d3765c3363b4e2c3a921d16bffd88e/transformed/documentfile-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/aabd3dd06cbed372c8654fd7546411c2/transformed/localbroadcastmanager-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform print-1.0.0.aar (androidx.print:print:1.0.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/ad947cf1199bc0395fa6c3004e6920b7/transformed/print-1.0.0.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+   > Failed to transform exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.androidharness.app/files/.harness-scratch/gradle/caches/8.10.2/transforms/4d59821bf1f6fba014491063272c9318/transformed/exifinterface-1.3.7.
+         > Expected file collection to contain exactly one file, however, it contains no files.
+> There are 21 more failures with identical causes.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6m 48s
+15 actionable tasks: 15 executed
+EXIT=1
