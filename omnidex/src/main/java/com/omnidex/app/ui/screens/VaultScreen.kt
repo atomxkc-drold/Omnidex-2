@@ -61,6 +61,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.omnidex.app.data.SwipeAction
 import com.omnidex.app.domain.EntryType
+import com.omnidex.app.domain.Severity
 import com.omnidex.app.domain.VaultEntry
 import com.omnidex.app.ui.brand.BrandCatalog
 import com.omnidex.app.ui.components.AppBackground
@@ -201,7 +202,7 @@ fun VaultScreen(
                             fontSize = 12.sp
                         )
                         PrimaryButton(
-                            text = "New Session",
+                            label = "New Session",
                             onClick = { onShowSessionSheet(true) },
                             modifier = Modifier.fillMaxWidth()
                         )
@@ -416,7 +417,7 @@ private fun EntryRow(
                         Icon(
                             Icons.Rounded.LocalFireDepartment,
                             contentDescription = null,
-                            tint = if (entry.isConsumed) colors.textTertiary else colors.accent,
+                            tint = if (entry.isConsumed) colors.textSecondary else colors.accent,
                             modifier = Modifier.size(13.dp)
                         )
                     }
@@ -435,7 +436,7 @@ private fun EntryRow(
                 )
             }
             if (entry.isConsumed) {
-                TagPill("Consumed", color = colors.textTertiary.copy(alpha = 0.18f))
+                TagPill("Consumed", color = colors.textSecondary.copy(alpha = 0.18f))
                 Spacer(Modifier.width(6.dp))
             } else if (entry.isExpired()) {
                 TagPill("Expired", color = colors.accent.copy(alpha = 0.18f))

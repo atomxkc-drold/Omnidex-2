@@ -59,6 +59,7 @@ enum class EntryType(
     SSH("ssh", "SSH", "Host, port and optional key", ValueKind.CONNECTION),
     COLOR("color", "Color", "Hex colour value", ValueKind.COLOR),
     NUMBER("number", "Number", "Numeric value with a unit", ValueKind.NUMBER),
+    COMMAND("command", "Command", "Shell or dev command", ValueKind.COMMAND),
     COMPOSITE("composite", "Composite", "Generated artifact from multiple secrets", ValueKind.COMMAND),
     CONTEXT("context", "Context", "AI context snippet", ValueKind.TEXT),
     PROMPT("prompt", "Prompt", "Reusable AI prompt", ValueKind.TEXT),
