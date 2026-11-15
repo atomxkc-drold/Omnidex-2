@@ -59,7 +59,10 @@ enum class EntryType(
     SSH("ssh", "SSH", "Host, port and optional key", ValueKind.CONNECTION),
     COLOR("color", "Color", "Hex colour value", ValueKind.COLOR),
     NUMBER("number", "Number", "Numeric value with a unit", ValueKind.NUMBER),
-    COMPOSITE("composite", "Composite", "Generated artifact from multiple secrets", ValueKind.COMMAND);
+    COMPOSITE("composite", "Composite", "Generated artifact from multiple secrets", ValueKind.COMMAND),
+    CONTEXT("context", "Context", "AI context snippet", ValueKind.TEXT),
+    PROMPT("prompt", "Prompt", "Reusable AI prompt", ValueKind.TEXT),
+    SKILL("skill", "Skill", "Reusable skill instructions", ValueKind.TEXT);
 
     val isSecret: Boolean get() = kind == ValueKind.SECRET
 
